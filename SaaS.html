@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Platform</title>
+
+<style>
+:root{
+  --bg:#0b0b0d;
+  --panel:#111114;
+  --panel-soft:#151518;
+  --border:#1f1f23;
+
+  --text:#f5f5f5;
+  --muted:#9ca3af;
+  --accent:#4f9cff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 48px;
+  border-bottom:1px solid var(--border);
+}
+
+.logo{
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:0.3px;
+}
+
+nav a{
+  margin-left:28px;
+  text-decoration:none;
+  color:var(--muted);
+  font-size:14px;
+}
+
+nav a:hover{
+  color:var(--text);
+}
+
+/* ===== HERO ===== */
+.hero{
+  max-width:1100px;
+  margin:auto;
+  padding:110px 24px 90px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:56px;
+  font-weight:700;
+  margin-bottom:22px;
+  letter-spacing:-0.02em;
+}
+
+.hero p{
+  max-width:640px;
+  margin:0 auto 40px;
+  color:var(--muted);
+  font-size:17px;
+}
+
+/* CTA BUTTON (single, clean) */
+.cta-main{
+  display:inline-block;
+  padding:14px 34px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#4f9cff,#2563eb);
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  box-shadow:0 10px 30px rgba(79,156,255,0.25);
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-main:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 40px rgba(79,156,255,0.35);
+}
+
+/* ===== STATS ===== */
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:64px;
+  padding:70px 20px;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.stat{
+  text-align:center;
+}
+
+.stat h3{
+  font-size:28px;
+  font-weight:600;
+}
+
+.stat p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* ===== FEATURES ===== */
+.features{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.feature{
+  background:linear-gradient(180deg,var(--panel),var(--panel-soft));
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:34px;
+  transition:transform 0.25s, border-color 0.25s;
+}
+
+.feature:hover{
+  transform:translateY(-6px);
+  border-color:#2b2b30;
+}
+
+.feature h4{
+  margin-bottom:12px;
+  font-size:16px;
+  font-weight:600;
+}
+
+.feature p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ===== FINAL CTA ===== */
+.cta{
+  text-align:center;
+  padding:100px 24px;
+  background:radial-gradient(circle at top,#111827,#0b0b0d 60%);
+}
+
+.cta h2{
+  font-size:36px;
+  margin-bottom:14px;
+}
+
+.cta p{
+  color:var(--muted);
+  margin-bottom:34px;
+}
+
+/* reuse same premium button */
+.cta a{
+  margin-top:10px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:26px;
+  border-top:1px solid var(--border);
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .stats{
+    flex-direction:column;
+    gap:28px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SaaS Platform</div>
+  <nav>
+    <a href="#">Product</a>
+    <a href="#">Pricing</a>
+    <a href="#">Docs</a>
+    <a href="#">Login</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Everything you need to run your product</h1>
+  <p>
+    A modern SaaS platform to manage users, analytics, and growth —
+    built for speed, scale, and clarity.
+  </p>
+  <a href="#" class="cta-main">Get started</a>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h3>10k+</h3>
+    <p>Active teams</p>
+  </div>
+  <div class="stat">
+    <h3>99.9%</h3>
+    <p>Uptime</p>
+  </div>
+  <div class="stat">
+    <h3>120+</h3>
+    <p>Countries</p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <h4>Fast onboarding</h4>
+    <p>Get started in minutes with simple setup and clear flows.</p>
+  </div>
+
+  <div class="feature">
+    <h4>Secure by default</h4>
+    <p>Enterprise-grade security practices built into the core.</p>
+  </div>
+
+  <div class="feature">
+    <h4>Real-time insights</h4>
+    <p>Understand user behavior with live analytics and reports.</p>
+  </div>
+
+  <div class="feature">
+    <h4>Scales with you</h4>
+    <p>From small teams to global products, scale without friction.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Start building today</h2>
+  <p>No credit card required. Cancel anytime.</p>
+  <a href="#" class="cta-main">Create free account</a>
+</section>
+
+<footer>
+  © 2026 SaaS Platform. All rights reserved.
+</footer>
+
+</body>
+</html>
